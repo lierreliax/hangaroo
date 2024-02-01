@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hangaroo Game</title>
+</head>
+<body>
+    <div id="container">
+        
+        <h1>Hangaroo Game</h1>
+        
+        <div id="game-area">
+            
+            <p id="question"> Question: </p>
+            <div id="guesses" class="button-container"></div>
+           
+            <p id = difficulty> Easy Difficulty</p>
+            <div id="alphabet-buttons" class="button-container"></div>
+
+            
+
+            
+
+            <div id="hintPopup" class="modal">
+                <p>Choose hint:</p>
+                <button onclick="useHint('consonant')">Consonant</button>
+                <button onclick="useHint('vowel')">Vowel</button>
+            </div>
+
+            <div id="insufficientPointsPopup" class="modal">
+                <div class="popup-content">
+                    <p>Insufficient Points! You need at least 25 points to use a hint.</p>
+                    <button onclick="closeInsufficientPointsPopup()">OK</button>
+                </div>
+            </div>
+            
+
+
+            <div id="gameOverModal" class="modal">
+                <p>Game Over!</p>
+                <button onclick="restartGame()">Play Again</button>
+            </div>
+
+
+            <div id="overlay" class="overlay"></div>
+
+
+            <div class="stats">
+                <div id="lives-container" class="stat-container">
+                    <p> <strong>Lives: </strong> 3 </p>
+                </div>
+
+                <div class="points">
+                    <p id="score"><strong>Points:</strong> 0 </p>
+                </div>
+                
+
+                <div id="hint-container" class="stat-container" onclick="showHintPopup()">
+                    <p> <strong> Hint: </strong> 3 </p>
+                </div>
+
+            </div>
+
+            
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 650px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    color: #333;
+}
+
+#game-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#guesses{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+}
+
+.guess {
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    cursor: default;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    vertical-align: top;
+    background-color: white;
+    
+}
+
+#alphabet-buttons {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    
+}
+
+.button {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 10px;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border: 0.5px solid black;
+}
+
+.button.correct {
+    background-color: #d3ffd3;
+    color: #333;
+    cursor: default;
+}
+
+.button:disabled {
+    background-color: #fbc3c1;
+    color: #333; 
+    cursor: not-allowed; 
+}
+
+#question{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#difficulty{
+    font-size: 25x;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 480px;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: aliceblue;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.lives{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    z-index: 1000;
+    text-align: center;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    backdrop-filter: blur(5px);
+}
+
+
+.hint-container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+#insufficientPointsPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    z-index: 1000;
+    text-align: center;
+}
+
+
+.stats{
+    margin-top: 20px;
+    gap: 20px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat-container {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: #333 solid 2px;
+}
+
+.points {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    font-size: 20px;
+    padding: 0 10px;
+    width: auto;
+    border-radius: 5px;
+    border: #333 solid 2px;
+}
